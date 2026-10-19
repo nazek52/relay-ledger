@@ -1,0 +1,41 @@
+name: relay-ledger-lab
+x-app: &app
+  build: .
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  pids_limit: 64
+  mem_limit: 256m
+  volumes: ["relay-data:/data"]
+  environment: &env
+    RELAY_DB: /data/relay.db
+    RELAY_TOKEN: ${RELAY_TOKEN:?Run python scripts/bootstrap.py first}
+    RELAY_SIGNING_SECRET: ${RELAY_SIGNING_SECRET:?Run bootstrap first}
+    RELAY_TARGET: http://receiver:8090/hook
+services:
+  api:
+    <<: *app
+    ports: ["127.0.0.1:8011:8011"]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8011/health',timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+  worker:
+    <<: *app
+    command: [python, -m, relay.worker]
+    depends_on:
+      api:
+        condition: service_healthy
+  receiver:
+    <<: *app
+    command: [python, -m, relay.receiver]
+    volumes: []
+    ports: ["127.0.0.1:8090:8090"]
+volumes:
+  relay-data:
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${LAB_SUBNET:-10.203.43.0/24}
