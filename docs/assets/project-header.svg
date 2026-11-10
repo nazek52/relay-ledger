@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Relay Ledger — BACKEND / RELIABILITY</title>
+<desc id="desc">Reliable delivery. Inspectable history.</desc>
+<rect x="1" y="1" width="1198" height="228" rx="18" fill="#10151E" stroke="#303846" stroke-width="2"/>
+<path d="M48 46H78" stroke="#BAADFF" stroke-width="4" stroke-linecap="round"/>
+<text x="94" y="52" fill="#BAADFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="2">BACKEND / RELIABILITY</text>
+<text x="46" y="124" fill="#F4F5F7" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="700" letter-spacing="-1.2">Relay Ledger</text>
+<text x="48" y="170" fill="#CED4DF" font-family="Arial, Helvetica, sans-serif" font-size="22">Reliable delivery. Inspectable history.</text>
+<text x="48" y="207" fill="#8E9AAE" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="1">RYMBEK NAZERKE / ENGINEERING PORTFOLIO</text>
+<g stroke="#2D3748" stroke-width="1"><path d="M918 36V204M982 36V204M1046 36V204M1110 36V204"/><path d="M878 56H1150M878 120H1150M878 184H1150"/></g>
+<path d="M914 64H958L1014 120H1110M914 184H950L1014 120" stroke="#BAADFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="904" y="54" width="20" height="20" rx="5" fill="#10151E" stroke="#BAADFF" stroke-width="3"/>
+<rect x="904" y="174" width="20" height="20" rx="5" fill="#10151E" stroke="#79CDB3" stroke-width="3"/>
+<circle cx="1014" cy="120" r="9" fill="#BAADFF"/>
+<circle cx="1110" cy="120" r="15" fill="#10151E" stroke="#79CDB3" stroke-width="3"/><circle cx="1110" cy="120" r="4" fill="#79CDB3"/>
+</svg>

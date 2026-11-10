@@ -1,12 +1,18 @@
-# Relay Ledger
+<a id="relay-ledger"></a>
+
+<p>
+  <img src="docs/assets/project-header.svg" alt="Relay Ledger — Reliable delivery. Inspectable history." width="100%">
+</p>
 
 [![Checks](https://github.com/nazek52/relay-ledger/actions/workflows/ci.yml/badge.svg)](https://github.com/nazek52/relay-ledger/actions/workflows/ci.yml)
 
-A durable webhook queue that survives worker crashes and makes delivery history inspectable. Send the same idempotency key twice: receive the same delivery. Reuse it with different content: receive **409 Conflict**.
+A durable webhook queue with signed payloads, bounded retries, and worker-crash recovery. Repeated idempotency keys resolve to the same delivery; conflicting payloads return **409 Conflict**. Every attempt leaves an inspectable record.
 
-**Python · FastAPI · SQLite WAL · concurrency · HMAC · Docker**
+**Python · FastAPI · SQLite WAL · HMAC · Docker**
 
-[Русский разбор](docs/INTERVIEW.ru.md) · [Architecture / guarantees](docs/architecture.md) · [Runbook](docs/runbook.md) · [Verification](docs/verification.md)
+[End-to-end demo](#end-to-end-demo) · [Architecture](docs/architecture.md) · [Runbook](docs/runbook.md) · [Verification](docs/verification.md) · [Русский разбор](docs/INTERVIEW.ru.md)
+
+---
 
 ## Behavior
 
